@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Baby Names</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+<div class="navbar">
+  <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+
+  
+
+  <div class="submenu">
+    <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+  <div class="submenu-content">
+      <a><span class="flag-icon flag-icon-fr"></span> Contactez-nous</a>
+      <a><span class="flag-icon flag-icon-in"></span> અમારો સંપર્ક કરો</a>
+  </div>
+  </div>
+
+
+  <a href="aboutme.html"><i class="fa fa-fw fa-user"></i> About</a>
+
+
+  <div class="submenu">
+    <a><i class="fa fa-fw fa-search"></i> Products</a>
+  <div class="submenu-content">
+      <a>Product 1</a>
+      <a>Product 2</a>
+  </div>
+  </div>
+</div>
+
+<h1>MOST POPULAR BABY NAME LISTS</h1><br>
+<p>Want a baby name that is chosen by loving parents time and time again? Find it 
+here on our list of Most Popular Baby Names. Recent naming trends include recycling 'old' names, shortening traditional names, 
+and changing the spelling <br>of well-known names. Despite this, some parents would rather keep the naming process simple. Have fun 
+choosing one of our popular baby names from our extensive lists of the most popular baby girl and baby boy names.</p>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names starting with alphabets A-E..">
+
+<ol id="myOL">
+  <li><a href="#">Aaden</a></li>
+  <li><a href="#">Aadit</a></li>
+  <li><a href="#">Aadvik</a></li>
+  <li><a href="#">Abdul</a></li>
+  <li><a href="#">Abel</a></li>
+  <li><a href="#">Abram</a></li>
+  <li><a href="#">Adam</a></li>
+  <li><a href="#">Aden</a></li>
+  <li><a href="#">Aj</a></li>
+  <li><a href="#">Akira</a></li>
+
+  <li><a href="#">Billy</a></li>
+  <li><a href="#">Bob</a></li>
+  <li><a href="#">Boris</a></li>
+  <li><a href="#">Braden</a></li>
+  <li><a href="#">Bradyn</a></li>
+  <li><a href="#">Brooklyn</a></li>
+  <li><a href="#">Bryan</a></li>
+  <li><a href="#">Bryant</a></li>
+  <li><a href="#">Bryson</a></li>
+  <li><a href="#">Byrin</a></li>
+
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Carlo</a></li>
+  <li><a href="#">Carlos</a></li>
+  <li><a href="#">Carter</a></li>
+  <li><a href="#">Casey</a></li>
+  <li><a href="#">Charles</a></li>
+  <li><a href="#">Chase</a></li>
+  <li><a href="#">Chris</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+
+  <li><a href="#">Darren</a></li>
+  <li><a href="#">David</a></li>
+  <li><a href="#">Daxon</a></li>
+  <li><a href="#">Daxton</a></li>
+  <li><a href="#">Dean</a></li>
+  <li><a href="#">Dev</a></li>
+  <li><a href="#">Dhruv</a></li>
+  <li><a href="#">Dominic</a></li>
+  <li><a href="#">Dwayne</a></li>
+  <li><a href="#">Dylan</a></li>
+
+  <li><a href="#">Eddie</a></li>
+  <li><a href="#">Edwin</a></li>
+  <li><a href="#">Eli</a></li>
+  <li><a href="#">Eliah</a></li>
+  <li><a href="#">Emmanuel</a></li>
+  <li><a href="#">Eric</a></li>
+  <li><a href="#">Erik</a></li>
+  <li><a href="#">Ewan</a></li>
+  <li><a href="#">Ezra</a></li>
+  <li><a href="#">Ezrah</a></li>
+</ol>
+
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, ol, li, a, i, txtValue;
+
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ol = document.getElementById("myOL");
+    li = ol.getElementsByTagName("li");
+
+  
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1 && filter != "") {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+
+    }
+  }
+window.onload = myFunction;
+</script>
+
+<label id="Welcome"></label>
+<script>
+  var date = new Date();
+  var hr = date.getHours();
+
+  var message;
+
+  if (hr >= 0 && hr < 6)
+      message = 'Good morning, you must be an early bird!';
+  else if (hr >= 6 && hr < 12)
+      message = 'Good Morning';
+  else if (hr >= 12 && hr < 18)
+      message = 'Good Afternoon';
+  else if (hr >= 18 && hr <= 23)
+      message = 'Good Evening';
+  document.getElementById('Welcome').innerHTML =
+      '<b>' + message + '</b>';
+</script> 
+
+
+</body>
+</html>
+
+<!--REFERENCE: https://www.encodedna.com/javascript/say-good-morning-afternoon-evening-using-javascript.htm-->
+<!--REFERENCE: https://www.w3schools.com/-->
